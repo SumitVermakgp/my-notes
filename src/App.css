@@ -6,12 +6,59 @@ h1 {
     font-weight: bold;
 }
 
-.App {
+.header {
+    color: cadetblue;
+    justify-content: center;
+}
+
+.app {
     height: 80vh;
     background: lightblue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+}
+
+.app-title {
+    width: 100%;
+}
+
+.sidebar {
+    height: 70vh;
+    width: 40vh;
+    margin-left: 10%;
+    align-items: flex-start;
+    background: lightcoral; 
+}
+
+.note {
+    margin-left: 50vh;
+    height: 50vh;
+    width: 50vh;
+    margin-top: 10%;
+    background: lightgreen;
+}
+
+.single-note {
+    height: 20%;
+    padding: 10px;
+	box-shadow: 1px 1px 4px rgb(97, 97, 97);
+	margin: 5px;
+	border-radius: 5px;
+	border-top-right-radius: 12px;
+}
+
+.active-note {
+    background: fuschia;
+}
+
+.noteTitle {
+    height: 10%;
+    width: 50vh;
+}
+
+.noteSummary {
+    height: 40vh;
+    width: 50vh;
 }
