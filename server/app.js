@@ -2,6 +2,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
+const db = require("./knex.js");
 
 const app = express();
 
@@ -16,6 +17,17 @@ app.use(
 app.get("/api/health", (_, res) => {
     res.status(200).send('OK');
 })
+
+// get all notes
+app.get("/api/notes", async (req, res) => {
+  try {
+    const notes = await db.select().table("notes");
+    res.json(notes);
+  } catch (err) {
+    console.error("Error loading notes!", err);
+    res.sendStatus(500);
+  }
+});
 
 
 
