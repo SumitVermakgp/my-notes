@@ -18,6 +18,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .app-title {
@@ -27,16 +28,16 @@ h1 {
 .sidebar {
     height: 70vh;
     width: 40vh;
-    margin-left: 10%;
+    margin-left: 0;
     align-items: flex-start;
     background: lightcoral; 
 }
 
 .note {
-    margin-left: 50vh;
-    height: 50vh;
-    width: 50vh;
-    margin-top: 10%;
+    margin-left: 0;
+    height: 60vh;
+    width: 80vh;
+    margin-top: 2%;
     background: lightgreen;
 }
 
