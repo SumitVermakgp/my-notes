@@ -1,21 +1,30 @@
 {
   "name": "notes",
   "version": "0.1.0",
+  "proxy": "http://localhost:9000",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "knex": "^0.95.11",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "hack": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "makeMigration": "knex migrate:make create_notes_table",
+    "migrate": "knex migrate:latest",
+    "seeder": "knex seed:make notes",
+    "seed": "knex seed:run"
   },
   "eslintConfig": {
     "extends": [
