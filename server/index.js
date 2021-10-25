@@ -11,9 +11,6 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
     console.log("Running migrations...");
     await db.migrate.latest();
 
-    //console.log("Running seeds...");
-    //await db.seed.latest();
-
     console.log("Starting express...");
     app.listen(PORT, () => {
       console.log(`App listening on port ${PORT}!`);
