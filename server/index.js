@@ -4,6 +4,8 @@ const db = require("./knex");
 
 const PORT = process.env.PORT || 9000;
 
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+
 (async () => {
   try {
     console.log("Running migrations...");
